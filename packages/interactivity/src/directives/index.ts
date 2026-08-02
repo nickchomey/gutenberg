@@ -14,6 +14,7 @@ import './init';
 import './on';
 import './router-region';
 import './run';
+import './show';
 import './style';
 import './text';
 import './watch';
