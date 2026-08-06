@@ -19,10 +19,9 @@ const empty = ' ';
  * @param val CSS string.
  * @return CSS object.
  */
-const cssStringToObject = (
+export const cssStringToObject = (
 	val: string
-): Record< string, string | number > => {
-	const tree = [ {} ];
+): Record< string, string | number > => {	const tree = [ {} ];
 	let block, left;
 
 	while ( ( block = newRule.exec( val.replace( ruleClean, '' ) ) ) ) {
