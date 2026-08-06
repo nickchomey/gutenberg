@@ -16,6 +16,7 @@ import { routerRegions } from './directives/router-region';
 import {
 	initialVdomPromise,
 	hydrateRegions,
+	hydrateAllRemaining,
 	getRegionRootFragment,
 } from './hydration';
 import { toVdom } from './vdom';
@@ -69,6 +70,7 @@ export { useState, useRef } from 'preact/hooks';
  * ```
  */
 export const watch = effect;
+export { renderHTML } from './render';
 
 const requiredConsent =
 	'I acknowledge that using private APIs means my theme or plugin will inevitably break in the next version of WordPress.';
@@ -80,6 +82,7 @@ export const privateApis = (
 		return {
 			getRegionRootFragment,
 			initialVdomPromise,
+			hydrateAllRemaining,
 			toVdom,
 			directive,
 			getNamespace,
